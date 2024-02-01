@@ -1,0 +1,95 @@
+<p class="color">demo works!</p>
+
+<button (click)="save()">savelog</button>
+<!-- 18dec -->
+<!-- below 👇 is the example of string interpolation -->
+<h3>hello my name is: <u style="color: red;">{{name}}</u> <-- example of string interpolation ""variable name from the particular component inside .ts file""</h3>
+<!-- {{print()}} -->
+<p>Server with {{serverID}} ID {{getServerStatus()}}</p>
+<!-- below 👇 is the example of property binding -->
+<p>--------------------------------------------------------------</p>
+<p>below 👇 is the example of the property binding</p>
+<img [src]="imageUrl" alt="image">
+
+<button [disabled]="isDisabled">isActive</button>
+
+<div [innerHtml]="hmtl"></div>
+
+
+<!-- ASSIGNMENT 18-dec data binding -->
+<h3>Assignment 18dec👇</h3>
+<h1>Example of the property binding</h1>
+<h3 style="color: rgb(255, 102, 0);">1. String interpolation</h3>
+<h4>profile</h4>
+<table style="border: 1px solid black;">
+    <tr style="border: 1px solid black;"> 
+        <th style="border: 1px solid black;">Name</th>
+        <th style="border: 1px solid black;">Address</th>
+        <th style="border: 1px solid black;">Gender</th>
+    </tr>
+   
+    <tr style="border: 1px solid black;">
+        <td style="border: 1px solid black;">{{NameS}}</td>
+        <td style="border: 1px solid black;">{{Adress}}</td>
+        <td style="border: 1px solid black;">{{gender}}</td>
+    </tr>
+    
+</table>
+
+
+
+
+<h3 style="color: rgb(72, 255, 0);">2. Property binding</h3>
+
+<img [src]="localImage" type="jpg" alt="local_Image" height="240px" width="320px">
+ <!-- ---------------------------------------------------------------------------------->
+ <!-- 19Dec -->
+ <!-- Event Binding -->
+ <p>below 👇 is the example of the event binding</p>
+ <button (click)="clickedButton()">Click me</button>
+ <p>total number of the button clicked: <span style="color:brown; font-weight: 600;font-size: 26px;">{{count}}</span></p>
+ <button (click)="restClicks()">Rest</button>
+
+ <!-- Event payload -->
+ <!-- $event is used to identify  -->
+ <h3 style="color:blueviolet;">3. EventPayLoad ($event)</h3>
+ <div><button style="background-color:paleturquoise; color: rgb(0, 0, 0); margin-top: 20px;" (click)="dollarEvent($event)">$event(event_payload)</button></div>
+
+ <!-- to limit the type of information entered in the field box using event payload -->
+  <div><input class="typeS" type="text" (input)="limitType($event)" placeholder="Enter only number or text "></div>
+
+  <!-- {{displayMsg()}} -->
+  {{aNE}}
+
+<!-- template reference variable -->
+<!-- syntax of template reference is #👇 -->
+<!-- TRV is used to access all the properties of any DOM Elements -->
+<h3 style="color:rgb(226, 122, 43);">4. template reference variable(#val) 👇</h3>
+<div><input class="typeS" type="text" #val (input)="limitType2(val)" placeholder="Enter only number or text "></div>
+<!-- {{displayMsg()}} -->
+{{aNE2}}
+
+
+<!-- Two way Data Binding👇 -->
+<!-- two way data binding [()] combination of the property binding [] and event()   -->
+<!-- it is also known as banana in box -->
+<!-- [(ngModel)]="data" -->
+<!--[(ngModel is the inbuilt directive and it's the part of FORMS module)] -->
+<!-- the angular uses the ngModel directive to achieve the two data binding on HTML forms element it binds element like input, select, selectarea ..etc -->
+
+<h2 style="color:rgb(43, 43, 226);">5. TWO WAY DATA BINDING 👇</h2>
+<div style="text-align: center; margin-bottom: 50px;">
+UserName: <input type="text" [(ngModel)]="UserNames">
+{{UserNames}}
+</div>
+
+
+<!-- Assignment👇 19 dec -->
+<h3>Assignment 19dec👇</h3>
+<ol>
+
+    <li>"Adding a Input field which updates a property ('username') via Two-Way-Binding"👉 userName2:<input type="text" [(ngModel)]="userName2"></li>
+    <li>"Entered value in above text input will be shown here"👉 <h4>{{userName2}}</h4></li>
+    <li>"On clicking this button 👉"<button [disabled]="DisbableBtn()" (click)="restText()">Click Here To Rest Above Text</button> will rest the above entered value</li>
+    <li><h4>{{aNE3}}</h4></li>
+</ol>

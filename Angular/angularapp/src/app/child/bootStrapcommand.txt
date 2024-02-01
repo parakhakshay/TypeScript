@@ -1,0 +1,19 @@
+https://getbootstrap.com/docs/4.0/content/tables/
+
+
+install bootstrap - npm install bootstrap --save
+
+install bootstrap  dependency - 1)npm install jquery --save
+								2)npm install popper.js --save
+								
+								
+								angular.json 
+	 "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+			
+	  "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+                "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]

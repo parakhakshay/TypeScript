@@ -1,0 +1,30 @@
+<p>pagination assignment 👇 28 Dec</p>
+<div id="container"><table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of paginatedData; let index = index">
+          <th scope="row">{{item.id}}</th>
+          <td>{{item.firstName}}</td>
+          <td>{{item.lastName}}</td>
+          <td>{{item.handle}}</td>
+        </tr>
+      
+      </tbody>
+</table>
+<app-core-code-pagination 
+[totalItems]="data.length" 
+[itemsPerPage]="itemsPerPage"
+[currentPage]="currentPage"
+(onClick)="changePage($event)"
+>
+
+</app-core-code-pagination>
+</div>
+

@@ -1,0 +1,26 @@
+<div>
+    <div class="justify-content-center">
+        {{title}}
+    </div>
+    <div>
+        <table class="table table-hover">
+            <thead >
+                <tr>
+                    <th style="background-color: black; color: whitesmoke;">Band Name</th>
+                    <th style="background-color: black; color: whitesmoke;">Song</th>
+                    <th style="background-color: black; color: whitesmoke;">Release Date</th>
+                    <th style="background-color: black; color: whitesmoke;">Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let singer of singers">
+                    <td>{{singer.Name}}</td>
+                    <td>{{singer.Song}}</td>
+                    <td>{{singer.releaseDate}}</td>
+                    <td>{{singer.Country}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

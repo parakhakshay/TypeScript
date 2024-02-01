@@ -1,0 +1,18 @@
+<p appCustom >ngclass works!</p>
+
+
+<div [ngClass]=" flag ? 'primary' : 'secondary' " >
+    this is the example of the ngClass
+</div>
+
+<button class="btn btn-success" (click)="changeFlag()">ChangeColor</button>
+<br><br>
+<button class="btn btn-success" (click)="flag =! flag">ChangeColor without using method</button>
+
+<ul *ngFor="let person of peoples">
+<li [ngClass]="{
+    'text-success' :person.country=='UK',
+    'text-primary':person.country=='USA',
+    'text-danger' :person.country=='HK'
+}">{{person.name}} ({{person.country}})</li>
+</ul>

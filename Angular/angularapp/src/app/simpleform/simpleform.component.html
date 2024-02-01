@@ -1,0 +1,78 @@
+<p>simpleform works!</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+<div class="col-md-6.text-left rounded shadow py-5">
+
+    <form #myForm="ngForm" (ngSubmit)="OnSubmit(myForm)">
+        <h2>Template Driven From (TDF)</h2>
+        <div class="mb-3">
+          <div #userDetails="ngModelGroup" ngModelGroup="userDetails">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" name="email" email ngModel aria-describedby="emailHelp" required #emails="ngModel" minlength="7" [(ngModel)]="email">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <small *ngIf="emails.touched && emails.errors">
+            <small *ngIf="emails.errors['required']"> email is required</small>
+            <small *ngIf="emails.errors['email']">Email is not valid</small>&nbsp;&nbsp;
+            <small *ngIf="emails.errors['minlength']">Email minium length should be 7</small>
+          </small>
+          
+          
+        
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="password" ngModel required minlength="7" pattern="">
+        
+        <div class="mb-3">
+          <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+          <input type="text" class="form-control" id="exampleInputPassword2" name="confirmPassword" ngModel required minlength="7" pattern="">
+
+          <br>
+          {{msgPassMatch}}
+
+        <div class="form-group">
+          <label for="course">select course</label>
+          <select class="form-control" name="course" id="course" ngModel required [ngModel]="defaultCourse">
+            <option value="Angular" >Angular</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Html">Html</option>
+          </select>
+          <div class="input-group mt-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text" class="input-group-text mt-2" *ngFor="let gender of genders">
+              <input type="radio" id="{{gender.id}}" name="gender" aria-label="Radio button for following text input" [ngModel]="defaultGender" value="{{gender.value}}" ngModel>
+              <label for="{{gender.id}}">{{gender.value}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+
+          <button [disabled]="!myForm.valid" type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-warning float-right" (click)="onReset(myForm)">Reset</button>
+
+          
+
+        </div>
+
+        <div *ngIf="isSubmitted" class="row justify-content-center mt-2">
+
+          <div class="col-md-6 rounded shadow py-4">
+            <p>Email Address:<strong>{{employee.email}}</strong></p>
+            <p>Password:<strong>{{employee.password}}</strong></p>
+            <p>confrimPassword:<strong>{{employee.confirmPassword}}</strong></p>
+            <p>Course:<strong>{{employee.course}}</strong></p>
+            <p>Gender<strong>{{employee.gender}}</strong></p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </form>
+
+</div>
+    </div>
+</div>
+

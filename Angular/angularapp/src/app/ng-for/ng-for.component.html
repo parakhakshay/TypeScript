@@ -1,0 +1,38 @@
+
+
+
+<div>
+    <div class="justify-content-center">
+        {{title}}
+    </div>
+    <div>
+        <table class="table">
+             <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Director</th>
+                    <th>Cast</th>
+                    <th>ReleaseDate</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr *ngFor="let movie of movies" >
+                    <td>{{movie.titles}}</td>
+                    <td>{{movie.director}}</td>
+                    <td>{{movie.cast}}</td>
+                    <td>{{movie.releaseDate}}</td>
+                </tr>
+                 
+                
+                <td></td>
+                <td></td>
+             </tbody>
+        </table>
+    </div>
+</div>
+
+<br>
+<div>
+<p>Assignment👇25-dec</p>
+<app-singer></app-singer>
+</div>

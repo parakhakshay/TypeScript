@@ -34,3 +34,14 @@ for (var index = 0; index < courses.length; index++) {
 // for loop array forloop object practice and nested one
 var z = courses[0], b = courses[1], c = courses[2], d = courses[3];
 console.log(z, b, c);
+// Default parameter
+function Display(id, name, role) {
+    if (role === void 0) { role = "Guest User"; }
+    // console.log("Function Called");
+    console.log("ID", id);
+    console.log("Name", name);
+    console.log("Role", role);
+}
+Display(101, "Jack"); //guest role
+console.log("----------------------------------------------------"); //just to look good in the console inside the browser
+Display(202, "John", "Admin"); //admin role

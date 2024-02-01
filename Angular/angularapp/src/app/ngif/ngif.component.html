@@ -1,0 +1,21 @@
+<p>ngif works!</p>
+
+<ng-template #elseBlock1>
+    <p >Show me is check using else block</p>
+    </ng-template>
+
+<div>
+    show <input type="checkbox" [(ngModel)]="showMe">
+</div>
+
+<p *ngIf="showMe ; else elseBlock1">ShowMe is clicked</p>
+
+
+
+<div *ngIf="condition;">this will show if condition is true</div>
+
+<div *ngIf="!condition;">this will show if condition is false</div>
+
+<!-- bootStrap -->
+
+<button type="button" class="btn btn-primary">Primary</button>

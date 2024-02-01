@@ -80,3 +80,71 @@ for (let index = 0; index < courses.length; index++) {
 var[z,b,c,d]=courses;
 
 console.log(z,b,c);
+
+
+// Default parameter
+
+function Display(id:number, name:string, role:string= "Guest User") {
+    // console.log("Function Called");
+    console.log("ID",id);
+    console.log("Name",name);
+    console.log("Role",role);
+    
+    
+    
+    
+}
+
+Display(101,"Jack")//guest role
+console.log("----------------------------------------------------");//just to look good in the console inside the browser
+Display(202,"John","Admin")//admin role
+
+
+
+// polymorphism: poly:"many or multi" and morphic:shapes. example: 
+
+// class pubg{
+//     move(){
+//         // left
+//     }
+//     move(){
+//         // right
+//     }
+
+//     move(){
+//         // up
+//     }
+//     move(){
+//         // down
+//     }
+// }
+
+// method name is same(move()) but performing different operation (up,down,right,left)
+// we can achieve same in programming by compile time polymorphism ---- method overloading---
+// errors coming in compiling the code is called compile time
+// same name with different argument/parameters example:
+    
+    // class pubg{
+//     move(){
+//         // left
+//     }
+//     move(isacrive:boolean){
+//         // right
+//     }
+
+//     move(name:number){
+//         // up
+//     }
+//     move(name:string){
+//         // down
+//     }
+// }
+
+// in above code we have passed the argument differently in each move method
+
+// runtime compiler:
+
+
+
+
+

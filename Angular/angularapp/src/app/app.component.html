@@ -1,0 +1,100 @@
+
+<div class="red">This is angular 14</div>
+
+<h1>My angular project name is: {{title}} <!--this {{}} is called as stringInterpolation--></h1>
+
+<app-demo></app-demo>
+<!-- below 👇line is the input decorator without alias name -->
+<!-- div><app-child [message]="sendData"></app-child></div> -->
+<!-- // below 👇line is the input decorator with the alias name -->
+<!-- alias name  👇 input decorator -->
+<h2 style="color:rgb(9, 164, 154)">6. Decorator properties (@Input)👇</h2>
+<div><app-child [childProp]="sendData"></app-child></div>
+<h2>Assignment 20dec 👇@Input Decorator</h2>
+<div><h2 style="color:rgb(9, 3, 6); background-color: rgb(255, 247, 0); padding: 10px; font-family: 'Poppins' sans-serif;">The Employee Details</h2>
+<div>
+    <app-child2 [Msg2]="ObjectData"></app-child2>
+</div>
+</div>
+
+
+
+<!-- outputDecorator👇 -->
+<div><app-child [childProp]="sendData" (newPrice)="getDataFromChild($event)"></app-child></div>
+<h1>{{price}}</h1>
+
+<h2 style="color:rgb(53, 164, 9)">Output Decorator👇(@Output) with EventEmitter</h2>
+
+<p>Assignment👇21-dec</p>
+
+<app-child2 (newObject)="ObjectDataOutput" (newObject)="getData($event)"></app-child2>
+
+
+
+<div>
+    
+    <ul>
+        <li *ngFor="let item of ObjectDataOutput | keyvalue">
+            {{ item.key }} - {{ item.value }}
+        </li>
+    </ul>
+</div>  
+
+
+
+<h2 style="color:rgb(164, 9, 107)">8. Directive ngIf👇</h2>
+<div><app-ngif></app-ngif></div>
+
+<h2 style="color:rgb(148, 164, 9)">9. Directive ngFor👇</h2>
+
+
+
+<div><app-ng-for></app-ng-for></div>
+<!-- *ngSwitch -->
+<div>
+    <app-ngswitch></app-ngswitch>
+</div>
+
+
+
+<!-- attribute directive -->
+<!-- ngStyle -->
+<div>
+    <app-ngstyle></app-ngstyle>
+</div>
+
+
+<br>
+<!-- *ngClass -->
+<div>
+    <app-ngclass></app-ngclass>
+</div>
+
+<br>
+<br>
+<br>
+
+<div style="text-align: center;">
+    <p  >Normal paragraph</p>
+    <p appCustom >custom paragraph</p>
+</div>
+
+<div>
+<app-pagination></app-pagination>
+</div>
+
+<h2 style="color:rgb(164, 9, 9)">10. template driven form (TDF)👇</h2>
+
+<!-- tdf template driven form👇 -->
+
+<div>
+    <app-simpleform></app-simpleform>
+</div>
+
+<br>
+<p>Assignment👇29-dec</p>
+
+<!-- Assignment Form -->
+<div>
+<app-assign-form></app-assign-form>
+</div>

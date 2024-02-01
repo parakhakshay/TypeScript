@@ -1,0 +1,14 @@
+
+<div>
+    
+    <ul>
+        <li *ngFor="let item of Msg2 | keyvalue">
+            {{ item.key }} - {{ item.value }}
+        </li>
+    </ul>
+</div>  
+
+
+
+
+<h1 (keydown)="onChange2(obj)" #obj> </h1>
